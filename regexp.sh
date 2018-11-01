@@ -56,7 +56,7 @@ egrep -o "('POČÍTAČ')|('počítač')"$DATA13 # RE13
 echo "--- RE14 ---"
 egrep -o "('Počítač')|('počítač')" $DATA14 # RE14
 echo "--- RE15 ---"
-egrep -o "'počítač'\i" $DATA15 # RE15
+egrep -o "'počítač'/i" $DATA15 # RE15
 echo "--- RE16 ---"
 egrep -o "^počítač.{0,}" $DATA16 # RE16
 echo "--- RE17 ---"
