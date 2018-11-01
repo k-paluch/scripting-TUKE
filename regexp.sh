@@ -50,13 +50,13 @@ egrep -o "Poc\+itac\+\+" $DATA10 # RE10
 echo "--- RE11 ---"
 egrep -o "p\?ocitac\?" $DATA11 # RE11
 echo "--- RE12 ---"
-egrep -o "('výpočtová technika')|('počítač')" $DATA12 # RE12
+egrep -o "(výpočtová technika)|(počítač)" $DATA12 # RE12
 echo "--- RE13 ---"
-egrep -o "('POČÍTAČ')|('počítač')"$DATA13 # RE13
+egrep -o "(POČÍTAČ)|(počítač)"$DATA13 # RE13
 echo "--- RE14 ---"
-egrep -o "('Počítač')|('počítač')" $DATA14 # RE14
+egrep -o "(Počítač)|(počítač)" $DATA14 # RE14
 echo "--- RE15 ---"
-egrep -o -i "'počítač'" $DATA15 # RE15
+egrep -o -i "počítač" $DATA15 # RE15
 echo "--- RE16 ---"
 egrep -o "^počítač.{0,}" $DATA16 # RE16
 echo "--- RE17 ---"
