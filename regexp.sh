@@ -40,27 +40,27 @@ egrep -o "\(pocitac\)" $DATA5 # RE5
 echo "--- RE6 ---"
 egrep -o "Poci\*tac" $DATA6 # RE6
 echo "--- RE7 ---"
-egrep -o "Poci\\\\tac" $DATA7 # RE7
+egrep -o "Poci(\\)(\\)tac" $DATA7 # RE7
 echo "--- RE8 ---"
 egrep -o "\"pocitac\"" $DATA8 # RE8
 echo "--- RE9 ---"
-egrep -o "\'pocitac\'" $DATA9 # RE9
+egrep -o "'pocitac'" $DATA9 # RE9
 echo "--- RE10 ---"
 egrep -o "Poc\+itac\+\+" $DATA10 # RE10
 echo "--- RE11 ---"
 egrep -o "p\?ocitac\?" $DATA11 # RE11
 echo "--- RE12 ---"
-egrep -o "'vypoctova technika'|'pocitac'" $DATA12 # RE12
+egrep -o "''výpočtová technika'|'počítač'" $DATA12 # RE12
 echo "--- RE13 ---"
-egrep -o "'POCITAC'|'pocitac'" $DATA13 # RE13
+egrep -o "'POČÍTAČ'|'počítač'" $DATA13 # RE13
 echo "--- RE14 ---"
-egrep -o "'pocitac'|'Pocitac'" $DATA14 # RE14
+egrep -o "'počítač'|'Počítač'" $DATA14 # RE14
 echo "--- RE15 ---"
-egrep -o "'pocitac'/i" $DATA15 # RE15
+egrep -o "'počítač'/i" $DATA15 # RE15
 echo "--- RE16 ---"
-egrep -o "^'pocitac'.*" $DATA16 # RE16
+egrep -o "^'počítač'.*" $DATA16 # RE16
 echo "--- RE17 ---"
-egrep -o "^.*'pocitac'+$" $DATA17 # RE17
+egrep -o "^.*'počítač'+$" $DATA17 # RE17
 echo "--- RE18 ---"
 egrep "\b[0-9][a-zA-Z0-9]" $DATA18 # RE18
 echo "--- RE19 ---"
