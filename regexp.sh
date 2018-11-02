@@ -52,7 +52,7 @@ egrep -o "p\?ocitac\?" $DATA11 # RE11
 echo "--- RE12 ---"
 egrep -o "(výpočtová technika)|(počítač)" $DATA12 # RE12
 echo "--- RE13 ---"
-egrep -o "(POČÍTAČ)|(počítač)"$DATA13 # RE13
+egrep -o "(POČÍTAČ)|(počítač)" $DATA13 # RE13
 echo "--- RE14 ---"
 egrep -o "(Počítač)|(počítač)" $DATA14 # RE14
 echo "--- RE15 ---"
