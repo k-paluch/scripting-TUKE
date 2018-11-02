@@ -62,9 +62,9 @@ egrep -o "^počítač.{0,}" $DATA16 # RE16
 echo "--- RE17 ---"
 egrep -o ".{0,}počítač$" $DATA17 # RE17
 echo "--- RE18 ---"
-egrep '(\b[0-9])\w+\b' $DATA18 # RE18
+egrep " [0123456789][^ ]* " $DATA18 # RE18
 echo "--- RE19 ---"
-egrep "\b\w*(de|te|ne|le|di|ti|ni|li)\w*\b" $DATA19 # RE19
+egrep " [^ ]*[dtnl][ei][^ ]* " $DATA19 # RE19
 echo "--- RE20 ---"
 egrep "(0|[1-9][0-9]*)(L|l)?" $DATA20 # RE20
 echo "--- RE21 ---"
