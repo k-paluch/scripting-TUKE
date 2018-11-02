@@ -67,16 +67,17 @@ echo "--- RE19 ---"
 egrep " [^ ]*[dtnl][ei][^ ]* " $DATA19 # RE19
 echo "--- RE20 ---"
 egrep "(0|[1-9][0-9]*)(L|l)?" $DATA20 # RE20
+egrep " (0|([123456789][0123456789]*))(l|L)? " $DATA20 # RE20
 echo "--- RE21 ---"
-egrep " 0[0-7]*(L|l)?" $DATA21 # RE21
+egrep " (0|0([01234567]*))(l|L)? " $DATA21 # RE21
 echo "--- RE22 ---"
-egrep "[1-9][0-9]{2}(l|L)?" $DATA22 # RE22
+egrep "[ ]([1-9][0-9][0-9])(L|l)?[ ]" $DATA22 # RE22
 echo "--- RE23 ---"
-egrep "(.)\1{1,}" $DATA23 # RE23
+egrep " [^ ]*([^ ])\1[^ ]* " $DATA23 # RE23
 echo "--- RE24 ---"
-egrep  "\b(\w+)(\W+\1\b)+" $DATA24 # RE24
+egrep " ([^ ]+) +\1 " $DATA24 # RE24
 echo "--- RE25 ---"
-egrep "[a-zA-Z]+\.[a-zA-Z]+(\.[1-9][0-9]*)?@(student\.)?tuke\.sk" $DATA25 # RE25
+egrep "[ ]([A-Za-z]+)\.([A-Za-z]+)((\.[2-9])|(\.[1-9]+[0-9]+[0-9]*))?@(student\.)?tuke\.sk[ ]" $DATA25 # RE25
 echo "--- RE26 ---"
 egrep "([[:blank:]][0-1][0-9]\:[0-5][0-9]\:[0-5][0-9]\.[0-9]{3}[[:blank:]])|([[:blank:]]2[0-3]\:[0-5][0-9]\:[0-5][0-9]\.[0-9]{3}[[:blank:]])" $DATA26 # RE26
 echo "--- RE27 ---"
