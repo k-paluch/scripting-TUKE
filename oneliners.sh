@@ -6,19 +6,19 @@ DATA4="/usr/sbin:/usr/bin:/sbin:/bin:/usr/games::/usr/local/games"
 DATA5=OLDATA
 DATA6=OLDATA/access.log
 echo "--- OL1 ---"
-#<prikaz> $DATA1 [| prikaz ]* # OL1
+cat $DATA1 | fold -w 1 | set | sort | uniq | tr -d '\n' | awk '{ print; }' #OL1
 
 echo "--- OL2 ---"
-#<prikaz> $DATA2 [| prikaz ]* # OL2
+cat $DATA2 | tr -d '\r' | awk '{ print; }' #OL2
 
 echo "--- OL3 ---"
-#<prikaz> $DATA3 [| prikaz ]* # OL3
+cat $DATA3 | awk -F $'\t' '{ t = $2; $2 = $3; $3 = t; print; }' OFS=$'\t' #OL3
 
 echo "--- OL4 ---"
-#<prikaz> $DATA4 [| prikaz ]* # OL4
+grep -Eo . <<< $DATA4 | tr -d "\n" | tr -s ":" | tr ":" '\n' && echo "" #OL4
 
 echo "--- OL5 ---"
-#<prikaz> $DATA5 [| prikaz ]* # OL5
+cd $DATA5; ls -l *.txt *.html *.md | awk '{ total += $5 }; END{ print total }'; cd ..; #OL5
 
 echo "--- OL6 ---"
-#<prikaz> $DATA6 [| prikaz ]* # OL6
+cat $DATA6 | sort | awk '{ print $1; }' | tr " " "\n" | sort | uniq -c | awk '{ printf("%s\t%s\n",$2,$1)}' | sort -k2 -n #OL6
