@@ -18,7 +18,7 @@ echo "--- OL4 ---"
 grep -Eo . <<< $DATA4 | tr -d "\n" | tr -s ":" | tr ":" '\n' && echo "" #OL4
 
 echo "--- OL5 ---"
-cd $DATA5; ls -l *.txt *.html *.md | awk '{ total += $5 }; END{ print total }'; cd ..; #OL5
+cd $DATA5; ls -l -f *.txt *.html *.md | awk '{ total += $5 }; END{ print total }'; cd ..; #OL5
 
 echo "--- OL6 ---"
 cat $DATA6 | sort | awk '{ print $1; }' | tr " " "\n" | sort | uniq -c | awk '{ printf("%s\t%s\n",$2,$1)}' | sort -k2 -n #OL6
