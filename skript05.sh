@@ -11,7 +11,7 @@ elif [ ! -d "$1" ]
 fi 
 cd $1;
 for file in $(ls -Sr); do
-if [-f $filename]; 
+if [ -f $filename ]; 
 	then linescount=0
 		while read line; do
 			if [[ "$line" =~ ^([a-z]|[ ])+$ ]]
@@ -20,12 +20,12 @@ if [-f $filename];
 			fi
 
 		done <$file
-		if [$linescount -eq 0]; 
+		if [ $linescount -eq 0 ]; 
 			then
-				echo $file$'\t'nie >&2
+				echo -e "$file"$'\t'nie >&2
 			else
-				echo $file$'\t'ano >&2
+				echo -e "$file"$'\t'ano >&2
 		fi
-			echo $file$'\t'$linescount >$DIRECTORY
+			echo -e "$file"$'\t'$linescount >$1
 fi
 done
