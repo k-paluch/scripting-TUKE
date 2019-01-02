@@ -6,7 +6,7 @@ DATA4="/usr/sbin:/usr/bin:/sbin:/bin:/usr/games::/usr/local/games"
 DATA5=OLDATA
 DATA6=OLDATA/access.log
 echo "--- OL1 ---"
-cat $DATA1 | fold -w 1 | set | sort | uniq | tr -d '\n' | awk '{ print; }' #OL1
+cat $DATA1 | fold -w 1 | sort | uniq | tr -d '\n' | awk '{ print; }' #OL1
 
 echo "--- OL2 ---"
 cat $DATA2 | tr -d '\r' | awk '{ print; }' #OL2
